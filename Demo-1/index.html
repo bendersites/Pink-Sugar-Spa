@@ -265,7 +265,7 @@
 
         /* Logo Container - groß für Header */
         .logo-container {
-            height: 140px;
+            height: 80px;
             width: auto;
             display: flex;
             align-items: center;
@@ -279,7 +279,7 @@
 
         /* Logo Container Footer - noch größer und transparent */
         .logo-container-footer {
-            height: 250px;
+            height: 120px;
             width: auto;
             display: flex;
             align-items: center;
@@ -295,6 +295,21 @@
         .brand-text {
             font-family: 'Playfair Display', serif;
         }
+
+        /* Mobile Header Optimizations */
+        @media (max-width: 768px) {
+            .logo-container {
+                height: 60px;
+            }
+            
+            .brand-text {
+                font-size: 1.5rem !important;
+            }
+            
+            .brand-subtext {
+                font-size: 0.75rem !important;
+            }
+        }
     </style>
 </head>
 <body class="text-gray-700 antialiased">
@@ -302,8 +317,8 @@
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50 border-b border-pink-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-36">
-                <div class="flex items-center gap-4">
+            <div class="flex justify-between items-center h-24 md:h-36">
+                <div class="flex items-center gap-3 md:gap-4">
                     <!-- Logo -->
                     <div class="logo-container">
                         <img data-local="images/logo.png" 
@@ -312,8 +327,8 @@
                     </div>
                     <!-- Brand Text -->
                     <div class="flex flex-col">
-                        <span class="brand-text text-4xl md:text-5xl font-semibold text-pink-600 leading-tight">Pink Sugar Spa</span>
-                        <span class="text-sm md:text-base text-gray-500 tracking-widest uppercase font-medium -mt-1">By Touka</span>
+                        <span class="brand-text text-2xl md:text-5xl font-semibold text-pink-600 leading-tight">Pink Sugar Spa</span>
+                        <span class="brand-subtext text-xs md:text-base text-gray-500 tracking-widest uppercase font-medium -mt-1">By Touka</span>
                     </div>
                 </div>
                 
@@ -371,7 +386,7 @@
     </div>
 
     <!-- 1. HERO -->
-    <section class="hero-bg min-h-screen flex items-center justify-center relative pt-40" id="hero">
+    <section class="hero-bg min-h-screen flex items-center justify-center relative pt-32" id="hero">
         <div class="text-center text-white px-4 max-w-4xl mx-auto">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
                 Gesunde Haut ohne<br><span class="text-pink-200">Kompromisse</span>
@@ -391,8 +406,11 @@
     <!-- 2. ÜBER UNS -->
     <section id="about" class="py-20 md:py-28 pink-gradient">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-pink-900 mb-4">Über Pink Sugar Spa By Touka</h2>
-            <div class="section-divider"></div>
+            <h2 class="text-3xl md:text-4xl font-bold text-pink-900 mb-4">Über Pink Sugar Spa</h2>
+            <div class="flex flex-col items-center mb-6">
+                <span class="brand-text text-2xl md:text-3xl text-pink-600">By Touka</span>
+                <div class="section-divider mt-4"></div>
+            </div>
             
             <div class="mt-8 space-y-6 text-gray-700 leading-relaxed bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-sm">
                 <p>
@@ -735,15 +753,15 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-gradient-to-br from-pink-900 via-pink-800 to-pink-900 text-white py-16">
+    <footer class="bg-gradient-to-br from-pink-900 via-pink-800 to-pink-900 text-white py-12 md:py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- 3 Spalten: Logo, Impressum, Rechtliches -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 items-start">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12 items-start">
                 
                 <!-- Spalte 1: Logo & Beschreibung -->
-                <div class="flex flex-col items-center md:items-start -mt-16">
-                    <div class="logo-container-footer mb-6">
+                <div class="flex flex-col items-center md:items-start">
+                    <div class="logo-container-footer mb-4">
                         <img data-local="images/logo.png" 
                              data-fallback="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23ec4899'/%3E%3Ctext x='50' y='65' font-size='45' text-anchor='middle' fill='white' font-family='serif'%3EPS%3C/text%3E%3C/svg%3E" 
                              alt="Pink Sugar Spa By Touka Logo">
