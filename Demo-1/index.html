@@ -752,52 +752,70 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-gradient-to-br from-pink-900 via-pink-800 to-pink-900 text-white py-12 md:py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- 3 Spalten: Logo, Impressum, Rechtliches -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12 items-start">
+        <!-- FOOTER -->
+    <footer class="bg-gradient-to-br from-pink-900 via-pink-800 to-pink-900 text-white">
+        <!-- Hauptbereich -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
                 
-                <!-- Spalte 1: Logo & Beschreibung -->
-                <div class="flex flex-col items-center md:items-start">
-                    <div class="logo-container-footer mb-4">
-                        <img data-local="images/logo.png" 
-                             data-fallback="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23ec4899'/%3E%3Ctext x='50' y='65' font-size='45' text-anchor='middle' fill='white' font-family='serif'%3EPS%3C/text%3E%3C/svg%3E" 
-                             alt="Pink Sugar Spa By Touka Logo">
+                <!-- Logo Bereich - nimmt 5 Spalten -->
+                <div class="lg:col-span-5 flex flex-col items-center lg:items-start">
+                    <div class="relative -mt-8 md:-mt-12 mb-6">
+                        <div class="logo-container-footer">
+                            <img data-local="images/logo.png" 
+                                 data-fallback="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23ec4899'/%3E%3Ctext x='50' y='65' font-size='45' text-anchor='middle' fill='white' font-family='serif'%3EPS%3C/text%3E%3C/svg%3E" 
+                                 alt="Pink Sugar Spa By Touka Logo"
+                                 class="max-h-[200px] md:max-h-[250px] w-auto object-contain drop-shadow-2xl">
+                        </div>
                     </div>
-                    <p class="text-pink-200 text-sm leading-relaxed max-w-sm text-center md:text-left">
+                    <p class="text-pink-200 text-sm leading-relaxed max-w-sm text-center lg:text-left">
                         Professionelle Kosmetikbehandlungen in Köln-Holweide. Spezialisiert auf Hautpflege, Aquafacial und Microneedling für sichtbare Ergebnisse.
                     </p>
                 </div>
 
-                <!-- Spalte 2: Impressum (Kurzform) -->
-                <div>
-                    <h4 class="text-sm font-semibold uppercase tracking-wider mb-4 text-pink-300">Impressum</h4>
-                    <div class="space-y-2 text-sm text-pink-200">
-                        <p class="font-medium text-white">Pink Sugar Spa By Touka</p>
-                        <p>Heinz-Kühn-Straße 43<br>51067 Köln</p>
-                        <p>Tel: <a href="tel:017647141365" class="footer-link">0176 47141365</a></p>
-                        <p class="pt-2 text-pink-300">Inhaber: Touka</p>
+                <!-- Rechte Spalten - Impressum & Rechtliches -->
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12 lg:pt-8">
+                    
+                    <!-- Impressum -->
+                    <div class="text-center sm:text-left">
+                        <h4 class="text-xs font-bold uppercase tracking-widest mb-4 text-pink-300">Impressum</h4>
+                        <div class="space-y-3 text-sm text-pink-100">
+                            <p class="font-semibold text-white text-base">Pink Sugar Spa By Touka</p>
+                            <div class="space-y-1">
+                                <p>Heinz-Kühn-Straße 43</p>
+                                <p>51067 Köln</p>
+                            </div>
+                            <p class="pt-2">
+                                Tel: <a href="tel:017647141365" class="footer-link hover:text-white transition-colors">0176 47141365</a>
+                            </p>
+                            <p class="text-pink-300 text-xs pt-2">Inhaber: Touka</p>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Spalte 3: Rechtliches -->
-                <div>
-                    <h4 class="text-sm font-semibold uppercase tracking-wider mb-4 text-pink-300">Rechtliches</h4>
-                    <div class="space-y-3 text-sm">
-                        <button onclick="openModal('impressum')" class="block footer-link">Impressum anzeigen</button>
-                        <button onclick="openModal('datenschutz')" class="block footer-link">Datenschutzerklärung</button>
+                    <!-- Rechtliches -->
+                    <div class="text-center sm:text-left">
+                        <h4 class="text-xs font-bold uppercase tracking-widest mb-4 text-pink-300">Rechtliches</h4>
+                        <div class="space-y-3">
+                            <button onclick="openModal('impressum')" class="block w-full sm:w-auto footer-link text-sm hover:text-white transition-colors">
+                                Impressum anzeigen
+                            </button>
+                            <button onclick="openModal('datenschutz')" class="block w-full sm:w-auto footer-link text-sm hover:text-white transition-colors">
+                                Datenschutzerklärung
+                            </button>
+                        </div>
                     </div>
+                    
                 </div>
-                
             </div>
+        </div>
 
-            <!-- Copyright -->
-            <div class="border-t border-pink-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-pink-300 text-sm">&copy; 2025 Pink Sugar Spa By Touka. Alle Rechte vorbehalten.</p>
+        <!-- Copyright Bar -->
+        <div class="border-t border-pink-700/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <p class="text-pink-300 text-xs md:text-sm text-center lg:text-left">
+                    &copy; 2025 Pink Sugar Spa By Touka. Alle Rechte vorbehalten.
+                </p>
             </div>
-            
         </div>
     </footer>
 
